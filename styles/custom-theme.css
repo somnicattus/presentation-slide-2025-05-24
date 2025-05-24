@@ -1,0 +1,148 @@
+/* @theme custom-theme */
+@import 'gaia';
+
+/* 基本スタイル */
+:root {
+    --main-color: #008cff;
+    --accent-color: #ff6b6b;
+    --background-color: #f5f5f5;
+    --text-color: #333333;
+    --heading-color: #1a1a1a;
+    --link-color: #0066cc;
+}
+
+/* 共通スタイル */
+section {
+    font-family: 'Helvetica Neue', Arial, sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    padding: 30px 40px;
+}
+
+/* タイトルスライド用スタイル */
+section.title-slide {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    background-color: var(--main-color);
+    color: white;
+}
+
+section.title-slide h1 {
+    font-size: 56px;
+    margin-top: 100px;
+    margin-bottom: 16px;
+    font-weight: bold;
+}
+
+section.title-slide h2 {
+    font-size: 36px;
+    font-weight: normal;
+}
+
+section.title-slide .presenter {
+    font-size: 40px;
+    margin-top: 60px;
+}
+
+section.title-slide .event-date {
+    font-size: 28px;
+    margin-top: 12px;
+}
+
+/* タイトルと本文のスライド用スタイル */
+section.content-slide h1 {
+    font-size: 48px;
+    color: var(--heading-color);
+    text-align: center;
+    margin-bottom: 48px;
+    border-bottom: 2px solid var(--main-color);
+    padding-bottom: 8px;
+}
+
+section.content-slide h2 {
+    font-size: 38px;
+    color: var(--heading-color);
+    margin-top: 24px;
+    margin-bottom: 16px;
+}
+
+section.content-slide {
+    padding-left: 80px;
+    padding-right: 80px;
+}
+
+section.content-slide p,
+section.content-slide>ul>li,
+section.content-slide>ol>li {
+    font-size: 32px;
+    line-height: 1.8;
+    text-align: left;
+    margin-bottom: 12px;
+}
+
+/* サブリストのスタイル */
+section.content-slide li li {
+    font-size: 0.95em;
+    line-height: 1.6;
+    margin-bottom: 8px;
+}
+
+/* コードブロックのスタイル */
+section pre {
+    background-color: #282c34;
+    border-radius: 6px;
+    padding: 16px 20px;
+    margin: 20px 0;
+    overflow-x: auto;
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16);
+}
+
+section code {
+    font-family: 'Fira Code', 'Source Code Pro', 'Consolas', monospace;
+}
+
+/* インラインコードのスタイル */
+section :not(pre)>code {
+    background-color: #e8e8e8;
+    color: #e81e3c;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-size: 0.9em;
+}
+
+/* コードブロック内コードのスタイル */
+section pre>code {
+    color: #abb2bf;
+    font-size: 24px;
+}
+
+/* 画像のスタイル */
+section.content-slide img {
+    display: block;
+    margin: 0 auto;
+    max-width: 90%;
+    max-height: 70vh;
+    object-fit: contain;
+}
+
+/* SNSアイコン用スタイル */
+section.content-slide img.sns-icon {
+    position: absolute;
+    bottom: 10%;
+    right: 10%;
+    width: 240px;
+    height: 240px;
+    border: 5px solid #eda14a;
+    border-radius: 50%;
+}
+
+section.title-slide img {
+    display: block;
+    margin: 0 auto;
+    max-width: 90%;
+    max-height: 70vh;
+    object-fit: contain;
+}
